@@ -1,0 +1,28 @@
+text,intent
+halo,greeting
+hai selamat pagi,greeting
+selamat siang,greeting
+hey,greeting
+halo bot,greeting
+bantuan,help
+tolong bantu saya,help
+apa saja yang bisa kamu lakukan,help
+cara pakai chatbot ini gimana,help
+catat beli makan siang 35 ribu,catat_transaksi
+catat pengeluaran bensin 50rb,catat_transaksi
+catat gajian bulan ini 5 juta,catat_transaksi
+catat bayar listrik 200 ribu,catat_transaksi
+catat beli kopi 25 ribu tadi pagi,catat_transaksi
+berapa saldo saya,tanya_saldo
+cek saldo bulan ini,tanya_saldo
+total saldo sekarang berapa,tanya_saldo
+saldo bersih bulan januari berapa,tanya_saldo
+lihat transaksi bulan ini,lihat_rincian
+tampilkan rincian pengeluaran januari,lihat_rincian
+rincian transaksi makan bulan ini,lihat_rincian
+berapa total pengeluaran bulan ini,tanya_total_kategori
+total belanja makan bulan lalu berapa,tanya_total_kategori
+pengeluaran listrik tahun ini berapa,tanya_total_kategori
+total beban bulan januari,tanya_total_akun
+berapa total akun beban,tanya_total_akun
+total pendapatan bulan ini,tanya_total_akun

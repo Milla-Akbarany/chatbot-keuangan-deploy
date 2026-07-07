@@ -1,5 +1,3 @@
-# data/*.csv 
-
 # Environment
 .env
 *.env
@@ -11,9 +9,6 @@ __pycache__/
 venv/
 .venv/
 *.egg-info/
-
-# Data sensitif
-data/*.csv
 
 # IDE
 .vscode/

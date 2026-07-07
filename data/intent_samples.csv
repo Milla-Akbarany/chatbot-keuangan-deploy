@@ -1,0 +1,321 @@
+sample_id;intent_id;sample_text
+1;1;halo
+2;1;hai
+3;1;selamat pagi
+4;1;selamat siang
+5;1;selamat malam
+6;1;halo bot
+7;1;hai apa kabar
+8;1;pagi bot
+9;1;permisi
+10;1;halo, lagi ngapain
+11;1;pagi
+12;1;siang
+13;1;sore
+14;1;malam
+15;1;permisi
+16;2;tolong bantu saya
+17;2;bantu dong
+18;2;apa yang bisa kamu lakukan
+19;2;fitur apa saja di aplikasi ini
+20;2;cara pakai kamu gimana
+21;2;jelaskan fungsi kamu
+22;2;aku bingung cara pakainya
+23;2;apa perintah yang bisa aku gunakan
+24;2;gimana makainya
+25;2;gimana pakainya
+26;2;apa aja fiturnya
+27;2;caranya gimana ini
+28;3;tolong catat belanja di indomaret 50 ribu
+29;3;saya bayar listrik 200 ribu hari ini
+30;3;saya bayar wifi 150 ribu
+31;3;saya membeli makan 20 ribu
+32;3;melunasi sewa ruko 2 juta
+33;3;saya mendapat bonus 300 ribu
+34;3;bayar iuran bpjs hari ini
+35;3;pendapatan dari klien 2 juta
+36;3;beli alat tulis 245 ribu
+37;3;catat pembelian bensin 100 ribu
+38;3;saya beli pulsa 25 ribu
+39;3;bayar parkir 5 ribu
+40;3;kemarin beli makan malam 30 ribu
+41;3;ongkir 12 ribu
+42;3;bayar spotify 54 ribu
+43;3;beli token listrik 100 ribu
+44;3;sarapan 15 ribu
+45;3;transfer ke teman 150 ribu
+46;3;bayar pajak motor 300 ribu
+47;3;gaji 5 juta
+48;3;cashback ovo 10 ribu
+49;3;beli minuman 8 ribu
+50;3;bayar cicilan motor 1 juta
+51;3;beli makanan kucing 40 ribu
+52;3;beli peralatan dapur 200 ribu
+53;3;bayar air pdam 75 ribu
+54;3;bayar utang ke andi 250 ribu
+55;3;top up e-money 100 ribu
+56;3;bayar sekolah anak 500 ribu
+57;3;beli baju 180 ribu
+58;3;bayar utang ke Andi 250 ribu
+59;3;top up e-money 100 ribu
+60;3;masukkan pengeluaran untuk ongkir 12 ribu
+61;3;saya transfer ke teman 150 ribu
+62;4;lihat semua transaksi hari ini
+63;4;tampilkan transaksi bulan ini
+64;4;lihat detail pengeluaran listrik
+65;4;lihat transaksi kemarin
+66;4;tunjukkan pengeluaran makan minggu ini
+67;4;tampilkan transaksi wifi
+68;4;lihat daftar pengeluaran hari ini
+69;4;tampilkan semua transaksi beban
+70;4;lihat transaksi aset tahun ini
+71;4;lihat detail token listrik
+72;4;tampilkan rincian pengeluaran sekolah anak
+73;4;tunjukkan transaksi top up e-money
+74;4;lihat transaksi kategori makan
+75;4;lihat transaksi transportasi bulan ini
+76;4;tampilkan transaksi antara tanggal tertentu
+77;4;ringkas pengeluaran saya minggu lalu
+78;4;tampilkan riwayat pembayaran sewa
+79;4;tunjukkan semua pembelian alat tulis kantor
+80;4;lihat transaksi aset yang dibeli tahun 2023
+81;5;saldo saya berapa
+82;5;berapa sisa uang saya
+83;5;berapa total saldo sekarang
+84;5;uang saya tersisa berapa
+85;5;berapa saldo terakhir
+86;5;saldo hari ini?
+87;5;tolong cek saldo saya
+88;5;berapa uang yang tersisa saat ini?
+89;5;berapa saldo akhir bulan lalu
+90;6;berapa total aset saya
+91;6;berapa total beban bulan ini
+92;6;berapa total pendapatan minggu ini
+93;6;berapa total kewajiban saya
+94;6;berapa total pengeluaran beban hari ini
+95;6;total aset tahun ini
+96;6;total beban bulan lalu
+97;6;total kewajiban bulan ini
+98;6;berapa total pengeluaran bulan ini
+99;6;total pendapatan keseluruhan tahun ini
+100;7;berapa total kas saya?
+101;7;total pengeluaran untuk kas berapa?
+102;7;berapa jumlah kas toko sekarang?
+103;7;berapa total setoran kas kecil bulan ini?
+104;7;berapa nilai tanah yang saya beli?
+105;7;berapa total aset tanah saya?
+106;7;berapa pengeluaran untuk pembelian tanah?
+107;7;berapa total dana yang saya habiskan untuk saham?
+108;7;berapa nilai investasi saham saya?
+109;7;berapa total pembelian saham bulan ini?
+110;7;berapa total biaya pembelian peralatan?
+111;7;berapa pengeluaran untuk membeli komputer dan mesin?
+112;7;berapa total aset peralatan?
+113;7;berapa total pengeluaran untuk gaji?
+114;7;berapa biaya gaji karyawan bulan ini?
+115;7;berapa total beban gaji?
+116;7;berapa total pengeluaran transportasi?
+117;7;berapa biaya ojek dan taksi bulan ini?
+118;7;berapa total BBM yang saya keluarkan?
+119;7;berapa total pajak motor
+120;7;berapa total beban makan minum?
+121;7;berapa pengeluaran makan minggu ini?
+122;7;berapa biaya ngopi dan snack rapat?
+123;7;berapa pengeluaran makan hari ini
+124;7;berapa total pengeluaran listrik?
+125;7;berapa biaya listrik PLN bulan ini?
+126;7;berapa tagihan listrik kantor selama minggu ini?
+127;7;total wifi minggu lalu berapa
+128;7;berapa total pendapatan penjualan?
+129;7;berapa uang masuk dari produk yang terjual?
+130;7;berapa total penjualan bulan ini?
+131;7;berapa total bunga bank yang saya dapat?
+132;7;berapa pendapatan deposito?
+133;7;berapa total bunga yang masuk?
+134;7;berapa total pendapatan jasa?
+135;7;berapa pemasukan dari klien?
+136;7;berapa total fee jasa bulan ini?
+137;7;berapa total utang dagang saya?
+138;7;berapa sisa pembayaran ke supplier?
+139;7;berapa total cicilan utang dagang?
+140;7;berapa total utang gaji?
+141;7;berapa tunggakan gaji staf?
+142;7;berapa sisa utang gaji bulan lalu?
+143;7;berapa total listrik bulan ini?
+144;7;total biaya listrik?
+145;7;berapa pengeluaran listrik?
+146;7;berapa total makan minggu ini?
+147;7;total pengeluaran kategori makan/minum berapa?
+148;7;berapa biaya transportasi bulan ini?
+149;7;total beban transportasi?
+150;7;berapa total gaji yang dibayarkan bulan ini?
+151;7;berapa total asset kas?
+152;7;jumlah seluruh transaksi saham berapa?
+153;7;berapa total investasi saham?
+154;7;berapa total pembelian peralatan?
+155;7;total transaksi tanah ada berapa?
+156;7;berapa total pendapatan jasa bulan ini?
+157;7;berapa total bunga bank?
+158;7;berapa total penjualan produk?
+159;7;jumlah utang dagang yang dibayar berapa?
+160;7;berapa total kewajiban utang gaji?
+161;7;tolong hitungkan total untuk kategori listrik
+162;7;berapa output kategori makan?
+163;7;berapa total biaya kategori gaji?
+164;7;berapa total pengeluaran untuk BBM?
+165;7;berapa pengeluaran ojek online bulan ini?
+166;7;berapa biaya wifi/listrik/telekomunikasi?
+167;7;berapa total pengeluaran PDAM?
+168;7;berapa total kas masuk/keluar untuk saham?
+169;7;berapa total pengeluaran alat tulis?
+170;7;berapa total kategori wifi minggu ini?
+171;7;berapa total pengeluaran kategori sekolah anak?
+172;7;total biaya transport minggu lalu berapa?
+173;7;berapa total makan siang kemarin?
+174;7;berapa total beban listrik tahun ini?
+175;7;berapa total aset peralatan tahun 2025?
+176;7;berapa total transaksi makan?
+177;7;berapa total biaya bensin hari ini?
+178;7;total belanja di kategori makan/minum?
+179;7;berapa banyak biaya kategori transport?
+180;7;berapa jumlah transaksi kategori gaji?
+181;1;hei
+182;1;hey
+183;1;hi
+184;1;haloo
+185;1;helo
+186;1;met pagi
+187;1;assalamualaikum
+188;1;selamat sore
+189;1;apa kabar bot
+190;1;halo semuanya
+191;2;bantuan
+192;2;help
+193;2;bisa apa aja ini
+194;2;aku ga ngerti ini
+195;2;tolong jelaskan
+196;2;cara penggunaannya gimana
+197;2;kamu bisa ngapain aja
+198;3;tadi makan siang 25rb
+199;3;habis beli kopi 18k
+200;3;abis bayar ojol 15ribu
+201;3;udh bayar listrik 250rb
+202;3;gajian masuk 4 juta
+203;3;dapet duit dari freelance 500rb
+204;3;bayar langganan netflix 60rb
+205;3;beli sayur di pasar 30rb
+206;3;pengeluaran bensin hari ini 50rb
+207;3;ada pemasukan dari jualan 200rb
+208;3;bayar iuran warga 25rb
+209;3;beli obat di apotek 75rb
+210;3;ngisi e-toll 100rb
+211;3;catat pemasukan bonus akhir tahun 1 juta
+212;3;habis makan bakso 15rb
+213;4;cek transaksi bulan ini
+214;4;riwayat transaksi
+215;4;apa aja yang sudah aku catat
+216;4;daftar pengeluaran bulan ini
+217;4;history transaksi
+218;4;tampilkan pengeluaran kategori makan
+219;4;lihat catatan keuangan minggu ini
+220;4;pengeluaran apa aja bulan ini
+221;4;mau liat transaksi kemarin
+222;4;tampilkan semua catatan bulan lalu
+223;5;berapa saldo ku
+224;5;saldo berapa
+225;5;cek saldo
+226;5;keuangan aku gimana
+227;5;berapa duit aku sekarang
+228;5;mau tau saldo
+229;5;kondisi keuangan bulan ini
+230;5;total uang aku berapa
+231;5;balance aku berapa
+232;5;sisa uang bulan ini berapa
+233;6;total pengeluaran ku berapa
+234;6;semua beban bulan ini berapa
+235;6;total aset yang aku punya
+236;6;berapa total pendapatan aku
+237;6;keseluruhan pengeluaran bulan ini
+238;6;total kewajiban ku sekarang
+239;6;pengeluaran total minggu ini
+240;6;rekap pendapatan tahun ini
+241;7;berapa total belanja makanan bulan ini
+242;7;habis berapa buat transport bulan ini
+243;7;total sewa bulan ini berapa
+244;7;listrik bulan ini habis berapa
+245;7;berapa yang aku keluarkan buat wifi bulan ini
+246;7;pengeluaran kopi bulan ini
+247;7;total pengeluaran kesehatan
+248;7;total pengeluaran sekolah bulan ini
+249;7;berapa gaji yang masuk bulan ini
+250;7;total penjualan bulan ini berapa
+251;7;total tagihan bulan ini
+252;7;berapa habis buat makan minggu lalu
+253;7;total biaya bensin bulan ini
+254;7;berapa pengeluaran hiburan bulan ini
+255;7;rekap pengeluaran kategori makan bulan ini
+256;3;catat dapat gaji 5 juta
+257;3;catat terima gaji bulan ini
+258;3;catat dapat honor 500 ribu
+259;3;catat menerima pembayaran freelance 2 juta
+260;3;catat dapat uang 300 ribu
+261;3;catat terima transfer 1 juta
+262;3;catat dapat bonus akhir tahun
+263;3;catat penghasilan minggu ini 800 ribu
+264;8;hapus transaksi terakhir
+265;8;hapus transaksi
+266;8;batalkan transaksi tadi
+267;8;hapus catatan terakhir
+268;8;delete transaksi
+269;8;koreksi transaksi tadi
+270;8;hapus pengeluaran tadi
+271;3;catat beli laptop 15 juta
+272;3;catat beli macbook 25 jt
+273;3;catat beli hp baru 5 juta
+274;3;catat beli motor 18 juta
+275;3;beli kulkas 3 juta
+276;3;beli perabot 2 juta
+277;3;catat dapat transferan 2 juta
+278;3;catat terima pembayaran 500 ribu
+279;3;catat nerima uang 1 juta
+280;3;catat dapat honor 300 ribu
+281;8;hapus transaksi
+282;8;hapus transaksi terakhir
+283;8;hapus pengeluaran tadi
+284;8;batalkan transaksi tadi
+285;8;hapus catatan terakhir
+286;8;delete transaksi
+287;8;koreksi transaksi tadi
+288;8;mau hapus transaksi
+289;8;tolong hapus catatan yang tadi
+290;8;hapus transaksi yang barusan
+291;7;apa pemasukan terbesarku
+292;7;pemasukan terbesar bulan ini
+293;7;apa pemasukan terbesar bulan ini
+294;7;pemasukan terbanyak
+295;7;pengeluaran terbesar bulan ini
+296;7;apa pengeluaran terbesarku
+297;4;berapa pemasukan bulan ini
+298;4;total pemasukan bulan ini
+299;4;berapa pendapatan bulan ini
+300;3;catat jajan cilok 5k tadi
+301;3;beli sesuatu tadi 10rb
+302;3;tadi beli makan 25k
+303;3;tadi keluar duit 50rb
+304;3;transfer 500rb
+305;3;transfer uang 200rb
+306;3;kirim uang 100rb
+307;4;apa saja penghasilanku bulan ini
+308;4;penghasilanku apa saja
+309;7;habis berapa aku bulan ini
+310;7;aku udah keluar berapa
+311;4;apa saja makanku
+312;4;lihat pengeluaran makan
+313;4;transaksi makan bulan ini
+314;4;pengeluaran makan minggu ini
+315;7;total makan bulan ini
+316;7;berapa total makanku
+317;1;tes
+318;1;buat apa ini
+319;2;fitur apa yang ada
+320;3;bayar grab

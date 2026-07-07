@@ -1,0 +1,8 @@
+"action_id";"action_name"
+1;"send_greeting"
+2;"show_help"
+3;"insert_transaction"
+4;"query_transaction"
+5;"calculate_balance"
+6;"query_total_akun"
+7;"query_total_kategori"
