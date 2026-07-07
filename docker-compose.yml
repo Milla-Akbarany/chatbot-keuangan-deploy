@@ -1,0 +1,71 @@
+# ============================================================
+#  Docker Compose — Chatbot Keuangan (Local Development)
+#  Menjalankan:
+#    - Qdrant baru (tidak ganggu qdrant_local lama)
+#    - MySQL
+# ============================================================
+
+services:
+
+  # ── Qdrant BARU (untuk chatbot / eksperimen) ──────────────
+  qdrant_chatbot:
+    image: qdrant/qdrant:latest
+    container_name: qdrant_chatbot
+    ports:
+      - "6335:6333"   # akses: localhost:6335
+      - "6336:6334"
+    volumes:
+      - qdrant_data_chatbot:/qdrant/storage
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── MySQL Database ────────────────────────────────────────
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_chatbot
+    ports:
+      - "3307:3306"   # akses: localhost:3307
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-data_finance}
+      MYSQL_CHARACTER_SET_SERVER: utf8mb4
+      MYSQL_COLLATION_SERVER: utf8mb4_unicode_ci
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  qdrant_data_chatbot:
+  mysql_data:
+
+# ============================================================
+#  CARA PAKAI:
+#
+#  1. Pastikan Docker sudah jalan
+#  2. Pastikan .env sudah ada (isi MYSQL_PASSWORD)
+#
+#  3. Jalankan:
+#     docker compose up -d
+#
+#  4. Cek:
+#     docker ps
+#
+#  5. Akses:
+#     - Qdrant lama     → http://localhost:6333 (TIDAK DIUBAH)
+#     - Qdrant baru     → http://localhost:6335
+#     - MySQL           → localhost:3307
+#
+#  6. Lanjut:
+#     python setup/seed_data.py
+#     python run.py
+#     streamlit run streamlit_ui/app.py
+# ============================================================

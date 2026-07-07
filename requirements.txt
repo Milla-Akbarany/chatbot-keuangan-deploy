@@ -1,0 +1,31 @@
+# Backend
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+pydantic==2.7.1
+pydantic-settings==2.2.1
+
+# Database
+mysql-connector-python==8.4.0
+
+# Vector DB
+qdrant-client==1.9.1
+
+# Embedding
+sentence-transformers==3.0.1
+torch==2.3.0
+
+# LLM
+groq==0.9.0
+
+# Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.9
+
+# Utils
+python-dotenv==1.0.1
+rapidfuzz==3.9.3
+
+# Frontend (jalankan terpisah)
+streamlit==1.35.0
+requests==2.32.2
