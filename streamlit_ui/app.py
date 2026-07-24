@@ -78,11 +78,15 @@ def show_login():
         username = st.text_input("Username", key="login_user")
         password = st.text_input("Password", type="password", key="login_pass")
         if st.button("Masuk", type="primary"):
-            resp = requests.post(
+            r = requests.post(
                 f"{API_BASE}/auth/login",
-                data={"username": username, "password": password},
-                timeout=10,
-            ).json()
+                json=data
+            )
+
+            print(r.status_code)
+            print(r.text)
+
+            resp = r.json()
             if "access_token" in resp:
                 st.session_state.token = resp["access_token"]
                 st.session_state.username = username
