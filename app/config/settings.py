@@ -16,9 +16,8 @@ class Settings(BaseSettings):
     mysql_database: str = "data_finance"
 
     # Qdrant
-    qdrant_host: str = "localhost"
-    qdrant_port: int = 6333
-    qdrant_api_key: str = ""
+    qdrant_url: str = "https://be6b5e1a-220c-443b-9837-fcf277bf4f97.us-west-1-0.aws.cloud.qdrant.io"
+    qdrant_api_key: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIiwic3ViamVjdCI6ImFwaS1rZXk6MmQ4MzhkZTMtOGQwNy00NTllLTlkNDMtYjE4MzFhMTc1NzI4In0.p2aY_3K6ZMqjCowV_FS81tFyAmp0S1HfkpOPlkd9qLE"
 
     # Groq
     groq_api_key: str

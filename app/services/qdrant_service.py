@@ -28,19 +28,19 @@ settings = get_settings()
 # ── Client Singleton ─────────────────────────────────────────────────────────
 _client: Optional[QdrantClient] = None
 
-
 def get_client() -> QdrantClient:
     global _client
-    if _client is None:
-        kwargs = {
-            "host": settings.qdrant_host,
-            "port": settings.qdrant_port,
-        }
-        if settings.qdrant_api_key:
-            kwargs["api_key"] = settings.qdrant_api_key
-        _client = QdrantClient(**kwargs)
-    return _client
 
+    if _client is None:
+        print("URL:", repr(settings.qdrant_url))
+        print("API:", repr(settings.qdrant_api_key[:10]))
+
+        _client = QdrantClient(
+            url=settings.qdrant_url,
+            api_key=settings.qdrant_api_key,
+        )
+
+    return _client
 
 # ── Dataclass untuk hasil ────────────────────────────────────────────────────
 @dataclass

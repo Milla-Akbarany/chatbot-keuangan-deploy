@@ -278,7 +278,7 @@ def _route(intent, clean_text, vector, entity, temporal, session_id, user_id) ->
         user_id=user_id,
     )
 
-
+import traceback
 # ── Helper: panggil LLM dengan fallback aman ─────────────────────────────────
 def _call_llm_safe(
     user_input: str,
@@ -300,8 +300,8 @@ def _call_llm_safe(
         if llm_response and llm_response.strip():
             return llm_response
         return fallback_response
-    except Exception as e:
-        logger.warning(f"LLM call failed, using fallback: {e}")
+    except Exception:
+        traceback.print_exc()
         return fallback_response
 
 
