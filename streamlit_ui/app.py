@@ -80,20 +80,24 @@ def show_login():
         if st.button("Masuk", type="primary"):
             r = requests.post(
                 f"{API_BASE}/auth/login",
-                json=data
+                data={"username": username, "password": password},
+                timeout=10,
             )
 
-            print(r.status_code)
-            print(r.text)
+            st.write("Status:", r.status_code)
+            st.write("Response:", r.text)
 
-            resp = r.json()
-            if "access_token" in resp:
-                st.session_state.token = resp["access_token"]
-                st.session_state.username = username
-                st.rerun()
+            if r.headers.get("content-type", "").startswith("application/json"):
+                resp = r.json()
+                if "access_token" in resp:
+                    st.session_state.token = resp["access_token"]
+                    st.session_state.username = username
+                    st.rerun()
+                else:
+                    st.error(resp.get("detail", "Login gagal."))
             else:
-                st.error(resp.get("detail", "Login gagal."))
-
+                st.error("Backend tidak mengembalikan JSON.")
+        
     with tab_register:
         new_user = st.text_input("Username baru", key="reg_user")
         new_pass = st.text_input("Password", type="password", key="reg_pass")
