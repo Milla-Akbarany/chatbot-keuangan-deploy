@@ -20,7 +20,7 @@ groq==0.9.0
 # Auth
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
-python-multipart==0.0.9
+bcrypt==4.1.3
 
 # Utils
 python-dotenv==1.0.1
