@@ -17,7 +17,7 @@ from datetime import datetime
 import streamlit.components.v1 as components
 
 # ── Konfigurasi ───────────────────────────────────────────────────────────────
-API_BASE = "http://localhost:8000"
+API_BASE = "https://chatbot-keuangan-deploy-production.up.railway.app"
 
 st.set_page_config(
     page_title="Chatbot Keuangan",
