@@ -30,15 +30,34 @@ st.set_page_config(
 
 
 # ── Helper API calls ──────────────────────────────────────────────────────────
-def api_post(endpoint: str, data: dict, token: str = None) -> dict:
+def api_post(endpoint: str, data: dict, token: str = None):
+
     headers = {}
+
     if token:
         headers["Authorization"] = f"Bearer {token}"
+
     try:
-        r = requests.post(f"{API_BASE}{endpoint}", json=data, headers=headers, timeout=30)
+
+        r = requests.post(
+            f"{API_BASE}{endpoint}",
+            json=data,
+            headers=headers,
+            timeout=30,
+        )
+
+        print(r.status_code)
+        print(r.text)
+
         return r.json()
+
     except Exception as e:
-        return {"error": str(e)}
+
+        print(e)
+
+        return {
+            "error": str(e)
+        }
 
 
 def api_get(endpoint: str, params: dict = None, token: str = None) -> dict:
@@ -156,22 +175,44 @@ def show_chat():
 
 
 def _send_message(text: str):
-    st.session_state.messages.append({"role": "user", "content": text})
+
+    st.session_state.messages.append(
+        {
+            "role": "user",
+            "content": text,
+        }
+    )
+
     resp = api_post(
         "/chat/message",
-        {"session_id": st.session_state.session_id, "message": text},
+        {
+            "session_id": st.session_state.session_id,
+            "message": text,
+        },
         token=st.session_state.token,
     )
+
+    print(resp)
+
+    if "error" in resp:
+        st.error(resp["error"])
+
+    st.write(resp)
+
     bot_msg = resp.get("response", "Terjadi kesalahan.")
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": bot_msg,
-        "latency": resp.get("latency_ms"),
-    })
+
+    st.session_state.messages.append(
+        {
+            "role": "assistant",
+            "content": bot_msg,
+            "latency": resp.get("latency_ms"),
+        }
+    )
+
     if resp.get("needs_confirmation"):
         st.session_state.pending_confirm = True
-    st.rerun()
 
+    st.rerun()
 
 def _send_confirmation(confirm: bool):
     st.session_state.pending_confirm = False
