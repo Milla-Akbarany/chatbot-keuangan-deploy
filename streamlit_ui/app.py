@@ -332,7 +332,7 @@ def show_dashboard():
 
         df_trend = pd.DataFrame(trend_rows).set_index("Bulan")
         if df_trend.sum().sum() > 0:
-            st.write(df_trend)
+            st.write(trend_rows)
         else:
             st.info("Belum ada data transaksi 6 bulan terakhir.")
 
@@ -361,7 +361,7 @@ def show_dashboard():
                     .set_index("Kategori")
                     .sort_values("Total", ascending=False)
                 )
-                st.write(df_cat)
+                st.write(cat_data)
             else:
                 st.info("Belum ada pengeluaran pada periode ini.")
         else:
