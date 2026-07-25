@@ -15,6 +15,9 @@ import uuid
 import pandas as pd
 from datetime import datetime
 import streamlit.components.v1 as components
+import os
+
+os.environ["STREAMLIT_USE_ARROW"] = "0"
 
 # ── Konfigurasi ───────────────────────────────────────────────────────────────
 API_BASE = "https://chatbot-keuangan-deploy-production.up.railway.app"
