@@ -346,6 +346,8 @@ def show_dashboard():
             token=st.session_state.token,
         )
         items = txn_data.get("items", [])
+        st.write(txn_data)
+        st.stop()
 
         if items:
             cat_data: dict = {}
