@@ -230,6 +230,7 @@ def _show_mini_dashboard():
 
 
 # ── Dashboard Page ────────────────────────────────────────────────────────────
+st.write("1")
 def show_dashboard():
     st.title(f"📊 Dashboard Keuangan — {st.session_state.username}")
 
@@ -280,6 +281,7 @@ def show_dashboard():
         period_label = f"Tahun {now.year}"
 
     # ── Summary Metrics ───────────────────────────────────────────────────────
+    st.write("2")
     data = api_get(
         "/transactions/summary",
         params={"period_type": period_type, "period_value": period_value},
@@ -309,6 +311,7 @@ def show_dashboard():
     with col_chart1:
         st.subheader("📈 Tren 6 Bulan Terakhir")
         trend_rows = []
+        st.write("3")
         for i in range(5, -1, -1):
             m, y = now.month - i, now.year
             while m <= 0:
@@ -329,14 +332,14 @@ def show_dashboard():
 
         df_trend = pd.DataFrame(trend_rows).set_index("Bulan")
         if df_trend.sum().sum() > 0:
-            st.bar_chart(df_trend, color=["#2196F3", "#F44336"])
+            st.write(df_trend)
         else:
             st.info("Belum ada data transaksi 6 bulan terakhir.")
 
     # ── Pengeluaran per Kategori ──────────────────────────────────────────────
     with col_chart2:
         st.subheader(f"🏷️ Pengeluaran per Kategori ({period_label})")
-
+        st.write("4")
         txn_data = api_get(
             "/transactions/list",
             params={"period_type": period_type, "period_value": period_value, "limit": 200},
@@ -358,7 +361,7 @@ def show_dashboard():
                     .set_index("Kategori")
                     .sort_values("Total", ascending=False)
                 )
-                st.bar_chart(df_cat, color="#F44336")
+                st.write(df_cat)
             else:
                 st.info("Belum ada pengeluaran pada periode ini.")
         else:
@@ -385,7 +388,7 @@ def show_dashboard():
                     .set_index("Kategori")
                     .sort_values("Total", ascending=False)
                 )
-                st.bar_chart(df_inc, color="#2196F3")
+                st.write(df_inc)
             else:
                 st.info("Belum ada pemasukan pada periode ini.")
 
@@ -399,7 +402,7 @@ def show_dashboard():
                     "Pemasukan": [total_debit],
                     "Pengeluaran": [total_kredit],
                 }, index=["Total"])
-                st.bar_chart(df_komposisi, color=["#2196F3", "#F44336"])
+                st.write(df_komposisi)
             else:
                 st.info("Belum ada data keuangan pada periode ini.")
 
